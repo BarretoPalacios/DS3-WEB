@@ -1,10 +1,14 @@
-<nav class="bg-white fixed w-full top-0 left-0 right-0 shadow-md z-50 border-b border-gray-100">
+<nav class="bg-white w-full shadow-md border">
   <div class="container mx-auto px-4">
     <!-- Desktop Navbar -->
     <div class="hidden lg:flex justify-between items-center py-4">
       <!-- Logo y nombre -->
       <div class="flex items-center">
-        <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="NetPeru Logo" class="h-12 mr-3">
+        <img
+          src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+          alt="NetPeru Logo"
+          class="h-12 mr-3"
+        />
       </div>
 
       <!-- Info de contacto -->
@@ -35,124 +39,190 @@
 
       <!-- Botón de búsqueda -->
       <div class="flex items-center">
-        <button id="search-button" class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+        <button
+          id="search-button"
+          class="p-2 rounded-full hover:bg-gray-100 transition-colors"
+        >
           <i class="fas fa-search text-black"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Navbar -->
-    <div class="lg:hidden flex justify-between items-center py-4">
-      <!-- Logo -->
-      <div class="flex items-center">
-        <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="NetPeru Logo" class="h-10">
-      </div>
-      
-      <!-- Botones móviles -->
-      <div class="flex items-center space-x-4">
-        <button id="mobile-search-button" class="p-2 rounded-full hover:bg-gray-300 transition-colors border border-black flex gap-3 items-center">
-          <span class="text-sm">Buscar tu producto</span>
+    <div class="lg:hidden flex flex-col gap-2">
+      <!-- navbar superior  -->
+      <div class="flex justify-between items-center py-2">
+        <!-- div izquierdo -->
+        <div class="flex gap-1">
+          <!-- boton hamburgesa -->
+          <button
+            id="mobile-menu-button"
+            class="p-2 rounded-full hover:bg-gray-300 transition-colors"
+          >
+            <i class="fas fa-bars text-black"></i>
+          </button>
+
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <img
+              src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+              alt="NetPeru Logo"
+              class="h-10"
+            />
+            <img
+              src="http://www.ds3comunicaciones.com/cisco/images/logo-cisco.gif"
+              alt="NetPeru Logo"
+              class="h-10"
+            />
+          </div>
+        </div>
+
+        <!-- Botones buscar -->
+        <button
+          id="mobile-search-button"
+          class="p-2 rounded-md hover:bg-gray-300 transition-colors border border-black flex gap-3 items-center"
+        >
           <i class="fas fa-search text-black"></i>
         </button>
-        <button id="mobile-menu-button" class="p-2 rounded-full hover:bg-gray-300 transition-colors">
-          <i class="fas fa-bars text-black"></i>
-        </button>
+      </div>
+
+      <!-- nabvar inferior -->
+      <div class="py-2 pl-3">
+        <div class="flex items-start">
+          <i class="fas fa-phone-alt mt-1 mr-1 text-black"></i>
+          <p class="">996533223</p>
+          <i class="pl-4 fas fa-phone-alt mt-1 mr-1 text-black"></i>
+          <p class="">994428965</p>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-envelope mr-1 text-black"></i>
+          <span>netperu100@hotmail.com</span>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Menú móvil desplegable - Lado derecho -->
-  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+  <div
+    id="mobile-menu"
+    class="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+  >
     <!-- Botón de cerrar -->
     <div class="flex justify-end p-4">
       <button id="close-menu" class="text-gray-500 hover:text-gray-700">
         <i class="fas fa-times text-2xl"></i>
       </button>
     </div>
-    
+
     <!-- Contenido del menú -->
     <div class="px-6 pb-8">
       <!-- Enlaces adicionales -->
       <div class="">
-        <div class="flex flex-wrap justify-start gap-2 ">
-            <!-- Enlaces principales -->
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_b.html" 
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Lista Completa
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Access Point
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_small_bussines_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Switch Small Business
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_catalyst_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Switch Catalyst
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Cisco Meraki
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_nexus_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Cisco Nexus
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_router_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Routers
-            </a>
-            
-            <!-- Segunda fila -->
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Teléfonos Cisco
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_modulo_transceiver_fibra_b.html"
-               id="menu2"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Módulo/Transceiver de Fibra
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_accesorios_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Accesorios
-            </a>
-            
-            <a href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html"
-               id="menu"
-               class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600  transition-colors duration-200 text-sm md:text-base">
-                Switch Industrial
-            </a>
+        <div class="flex flex-wrap justify-start gap-2">
+          <!-- Enlaces principales -->
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Lista Completa
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Access Point
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_small_bussines_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Switch Small Business
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_catalyst_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Switch Catalyst
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Cisco Meraki
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_nexus_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Cisco Nexus
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_router_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Routers
+          </a>
+
+          <!-- Segunda fila -->
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Teléfonos Cisco
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_modulo_transceiver_fibra_b.html"
+            id="menu2"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Módulo/Transceiver de Fibra
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_accesorios_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Accesorios
+          </a>
+
+          <a
+            href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html"
+            id="menu"
+            class="border-b w-full block py-2 font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 text-sm md:text-base"
+          >
+            Switch Industrial
+          </a>
         </div>
-    </div>
-      
+      </div>
+
       <!-- Lista de precios (desplegable) -->
       <div class="">
         <details class="group">
-          <summary class="flex justify-between items-center cursor-pointer list-none py-3 border-b">
+          <summary
+            class="flex justify-between items-center cursor-pointer list-none py-3 border-b"
+          >
             <span class="font-bold text-gray-800">Lista de Precios</span>
-            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+            <i
+              class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"
+            ></i>
           </summary>
-          <div class="mt-2 ">
+          <div class="mt-2">
             <ul class="flex flex-col gap-2">
               <!-- AMP -->
               <li class="hover:bg-blue-50 rounded transition-colors">
@@ -344,13 +414,17 @@
           </div>
         </details>
       </div>
-      
+
       <!-- Marcas (desplegable) -->
       <div class="">
         <details class="group">
-          <summary class="flex justify-between items-center cursor-pointer list-none py-3 border-b">
+          <summary
+            class="flex justify-between items-center cursor-pointer list-none py-3 border-b"
+          >
             <span class="font-bold text-gray-800">Marcas</span>
-            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+            <i
+              class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"
+            ></i>
           </summary>
           <div class="flex flex-col items-center justify-center gap-2 mt-2">
             <!-- Marca Alfa -->
@@ -624,33 +698,64 @@
           </div>
         </div>
       </div>
-      
-      
     </div>
   </div>
 
   <!-- Overlay para menú móvil -->
-  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+  <div
+    id="menu-overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+  ></div>
 </nav>
 
 <!-- Modal de Búsqueda -->
-<section id="search-modal" class="fixed top-0 left-0 right-0 bottom-0 h-screen w-full px-5 pt-7 anim none z-50" style="background-color: rgba(0, 0, 0, 0.575)">
+<section
+  id="search-modal"
+  class="fixed top-0 left-0 right-0 bottom-0 h-screen w-full px-5 pt-7 anim none z-50"
+  style="background-color: rgba(0, 0, 0, 0.575)"
+>
   <div class="max-w-[600px] mx-auto flex gap-2 justify-between">
-    <form name="form1" method="get" action="https://www.ds3comunicaciones.com/find.html" class="mx-auto flex items-center justify-between px-1 border w-full rounded-md bg-white" enctype="application/x-www-form-urlencoded">
+    <form
+      name="form1"
+      method="get"
+      action="https://www.ds3comunicaciones.com/find.html"
+      class="mx-auto flex items-center justify-between px-1 border w-full rounded-md bg-white"
+      enctype="application/x-www-form-urlencoded"
+    >
       <div class="flex items-center w-full">
         <i class="fa-solid fa-magnifying-glass ps-2 text-gray-500"></i>
-        <input name="q" type="text" class="outline-none px-3 py-3 w-full" placeholder="Buscar..." required>
+        <input
+          name="q"
+          type="text"
+          class="outline-none px-3 py-3 w-full"
+          placeholder="Buscar..."
+          required
+        />
       </div>
-      <input type="hidden" name="cx" value="partner-pub-9265252540298851:f2549i3fi60">
-      <input type="hidden" name="cof" value="FORID:10">
-      <input type="hidden" name="ie" value="ISO-8859-1">
-      <div class="cursor-pointer px-3 py-1 rounded-md text-sm relative flex items-center bg-blue-500 text-white hover:bg-blue-600 transition-colors">
-        <input name="sa" type="submit" value="Buscar" class="cursor-pointer bg-transparent border-none text-white">
+      <input
+        type="hidden"
+        name="cx"
+        value="partner-pub-9265252540298851:f2549i3fi60"
+      />
+      <input type="hidden" name="cof" value="FORID:10" />
+      <input type="hidden" name="ie" value="ISO-8859-1" />
+      <div
+        class="cursor-pointer px-3 py-1 rounded-md text-sm relative flex items-center bg-blue-500 text-white hover:bg-blue-600 transition-colors"
+      >
+        <input
+          name="sa"
+          type="submit"
+          value="Buscar"
+          class="cursor-pointer bg-transparent border-none text-white"
+        />
         <i class="fa-solid fa-caret-right ml-1"></i>
       </div>
     </form>
     <div class="mx-auto text-end">
-      <button id="close-search" class="cursor-pointer text-white text-2xl flex items-center justify-center w-[35px] h-[42px] rounded-md font-medium hover:bg-gray-700 transition-colors">
+      <button
+        id="close-search"
+        class="cursor-pointer text-white text-2xl flex items-center justify-center w-[35px] h-[42px] rounded-md font-medium hover:bg-gray-700 transition-colors"
+      >
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>

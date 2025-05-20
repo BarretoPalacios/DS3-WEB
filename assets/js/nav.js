@@ -35,7 +35,7 @@ function initializeMobileMenu() {
     if (!mobileMenuButton || !mobileMenu) return;
 
     mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.remove('-translate-x-full');
         mobileMenu.classList.remove('hidden');
         if (menuOverlay) menuOverlay.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
@@ -57,7 +57,7 @@ function initializeMobileMenu() {
     }
 
     function closeMobileMenu() {
-        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.add('-translate-x-full');
         if (menuOverlay) menuOverlay.classList.add('hidden');
         document.body.style.overflow = '';
         
@@ -129,8 +129,8 @@ function addDynamicStyles() {
         }
         
         /* Estilos para el menú móvil */
-        .translate-x-full {
-            transform: translateX(100%);
+        .-translate-x-full {
+            transform: translateX(-100%);
         }
         
         #mobile-menu {
